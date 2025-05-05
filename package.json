@@ -1,0 +1,18 @@
+{
+  "name": "server-backup-system",
+  "version": "1.0.0",
+  "description": "Node.js server backup system with Discord webhook notifications",
+  "main": "backup-system.js",
+  "scripts": {
+    "start": "node backup-system.js --all",
+    "backup:mariadb": "node backup-system.js mariadb",
+    "backup:timescaledb": "node backup-system.js timescaledb",
+    "backup:nginx": "node backup-system.js nginx",
+    "backup:pterodactyl": "node backup-system.js pterodactyl",
+    "backup:database": "node backup-system.js mariadb timescaledb",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^1.9.0"
+  }
+}
