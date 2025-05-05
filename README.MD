@@ -1,4 +1,4 @@
-> [!INFO]
+> [!NOTE]
 > This project was made using AI in around 30 minutes - It works for me but there is no guarantee it will for your specific situation :)
 
 # Node.js Backup System
