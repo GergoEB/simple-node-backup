@@ -6,7 +6,7 @@
 This is a Node.js implementation of an automatic backup system that can handle backups for:
 
 * MariaDB
-* TimescaleDB
+* TimescaleDB (from docker container)
 * Nginx
 * Pterodactyl
 
@@ -15,9 +15,9 @@ I made it in around 30 minutes using some AI - and it seems to be working correc
 ## Features
 
 * Automated backups for multiple services
-* Cleanup of old backups (configurable retention)
+* Cleanup of old backups (configurable retention per module)
 * Discord webhook notifications with backup summary
-* Colorized console output
+* Colorized console output (Not seen as intended for cron anyways)
 * Individual or bulk backup execution
 
 ---
@@ -28,7 +28,7 @@ I made it in around 30 minutes using some AI - and it seems to be working correc
 2. Install dependencies:
 
 ```bash
-npm install axios
+npm install
 ```
 
 3. Update the `config` object in `backup-system.js` with your Discord webhook URL (optional)
@@ -51,6 +51,7 @@ node backup-system.js --all
 ```bash
 node backup-system.js mariadb timescaledb
 node backup-system.js nginx pterodactyl
+npm run start
 ```
 
 ## Configuration
